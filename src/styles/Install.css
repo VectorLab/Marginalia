@@ -1,0 +1,245 @@
+.install-header {
+  padding-block: clamp(3rem, 10vh, 5rem);
+  text-align: center;
+}
+
+.install-title {
+  font-family: var(--font-display);
+  font-size: var(--s-huge);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--s-xs);
+}
+
+.install-subtitle {
+  font-family: var(--font-display);
+  font-size: var(--s-md);
+  font-style: italic;
+  color: var(--c-acc-subtle);
+}
+
+.install-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(600px, 100%) 220px;
+  gap: var(--s-lg);
+  padding-inline: var(--s-md);
+  padding-bottom: clamp(3rem, 10vh, 5rem);
+}
+
+@media (max-width: 1000px) {
+  .install-wrapper {
+    display: block;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+
+.install-content {
+  grid-column: 2;
+}
+
+.install-card {
+  background: var(--c-bg-alt);
+  border-radius: var(--radius-md);
+  padding: var(--s-lg);
+  margin-bottom: var(--s-md);
+}
+
+.install-card:last-child {
+  margin-bottom: 0;
+}
+
+.install-card-title {
+  font-family: var(--font-display);
+  font-size: var(--s-lg);
+  font-weight: 400;
+  margin-bottom: var(--s-sm);
+}
+
+.config-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-xs);
+}
+
+.config-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-xs);
+  padding: var(--s-xs);
+  background: var(--c-bg);
+  border-radius: var(--radius-sm);
+}
+
+.status-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.status-dot[data-status="ok"] {
+  background: var(--c-success, #22c55e);
+}
+
+.status-dot[data-status="missing"] {
+  background: var(--c-error, #ef4444);
+}
+
+.status-dot[data-status="optional"] {
+  background: var(--c-warning, #f59e0b);
+}
+
+.config-name {
+  font-size: var(--s-sm);
+  font-weight: 500;
+}
+
+.config-desc {
+  font-size: var(--s-xs);
+  color: var(--c-acc-subtle);
+  margin-top: 2px;
+}
+
+.install-steps {
+  font-family: var(--font-body);
+  font-size: var(--s-sm);
+  line-height: var(--lh-base);
+  padding-left: var(--s-md);
+  margin: 0;
+}
+
+.install-steps li {
+  margin-bottom: 0.4em;
+}
+
+.install-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.install-steps li::marker {
+  color: var(--c-acc-1);
+}
+
+.install-code {
+  font-family: "SF Mono", "Consolas", "Monaco", monospace;
+  font-size: 0.875em;
+  padding: 0.1em 0.35em;
+  background: hsla(var(--hue-ink), var(--sat-ink), var(--lum-ink), 0.06);
+  border-radius: 3px;
+  color: var(--c-fg);
+}
+
+.install-link {
+  color: var(--c-acc-1);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color var(--dur-fast);
+}
+
+.install-link:hover {
+  color: var(--c-fg);
+}
+
+.install-pre {
+  margin-top: var(--s-sm);
+  padding: var(--s-sm) var(--s-md);
+  background: hsla(var(--hue-ink), var(--sat-ink), var(--lum-ink), 0.04);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  font-family: "SF Mono", "Consolas", "Monaco", monospace;
+  font-size: 0.85em;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+.install-margin-column {
+  grid-column: 3;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .install-margin-column {
+    display: none;
+  }
+}
+
+.install-note {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--s-xs);
+  line-height: var(--lh-base);
+  color: var(--c-acc-subtle);
+  padding-left: var(--s-xs);
+  border-left: 2px solid var(--c-border);
+  transition:
+    color var(--dur-fast),
+    border-color var(--dur-fast);
+}
+
+.install-note:hover {
+  color: var(--c-fg);
+  border-color: var(--c-acc-1);
+}
+
+.install-desc {
+  font-family: var(--font-body);
+  font-size: var(--s-sm);
+  line-height: var(--lh-base);
+  color: var(--c-acc-subtle);
+  margin-bottom: var(--s-md);
+}
+
+.install-login-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-xs);
+  padding: var(--s-sm) var(--s-lg);
+  font-family: var(--font-body);
+  font-size: var(--s-sm);
+  font-weight: 500;
+  color: var(--c-bg);
+  background: var(--c-fg);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background var(--dur-fast),
+    transform var(--dur-fast);
+}
+
+.install-login-btn:hover {
+  background: var(--c-acc-1);
+}
+
+.install-login-btn:active {
+  transform: scale(0.98);
+}
+
+.install-login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.install-error {
+  max-width: 600px;
+  margin: 0 auto var(--s-md);
+  padding: var(--s-sm) var(--s-md);
+  background: hsla(0, 80%, 50%, 0.1);
+  border: 1px solid hsla(0, 80%, 50%, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--c-error, #ef4444);
+  font-size: var(--s-sm);
+  text-align: center;
+}

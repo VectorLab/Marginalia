@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+bun.lock
+
+# build output
+.output/
+.nitro/
+.vinxi/
+.tanstack/
+.cache/
+
+# generated
+**/routeTree.gen.ts
+
+# database
+data/
+
+# env files
+.env
+.env.local
+.env.*.local
+.env.production
+
+# misc
+.DS_Store
+*.tsbuildinfo

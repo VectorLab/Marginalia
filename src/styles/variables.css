@@ -1,0 +1,54 @@
+:root {
+  --unit: 4px;
+
+  --hue-paper: 42;
+  --sat-paper: 30%;
+  --lum-paper: 97%;
+
+  --hue-ink: 30;
+  --sat-ink: 10%;
+  --lum-ink: 18%;
+
+  --c-bg: hsl(var(--hue-paper), var(--sat-paper), var(--lum-paper));
+  --c-fg: hsl(var(--hue-ink), var(--sat-ink), var(--lum-ink));
+
+  --c-acc-1: hsl(5, 45%, 35%);
+  --c-acc-subtle: hsl(30, 8%, 50%);
+  --c-border: hsl(30, 15%, 88%);
+
+  --font-body: var(--f-sans), "Inter", -apple-system, sans-serif;
+  --font-display: var(--f-serif-display), "Charter", Georgia, serif;
+
+  --s-xs: 0.75rem;
+  --s-sm: 1rem;
+  --s-md: 1.333rem;
+  --s-lg: 1.778rem;
+  --s-xl: 2.369rem;
+  --s-xxl: 3.157rem;
+  --s-huge: 4.209rem;
+
+  --lh-tight: 1.15;
+  --lh-base: 1.6;
+  --lh-loose: 1.8;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.15s;
+  --dur-med: 0.3s;
+
+  --measure: 65ch;
+  --margin-col: 16rem;
+}
+
+[data-theme="dark"] {
+  --hue-paper: 30;
+  --sat-paper: 10%;
+  --lum-paper: 8%;
+
+  --hue-ink: 40;
+  --sat-ink: 15%;
+  --lum-ink: 85%;
+
+  --c-acc-1: hsl(5, 45%, 50%);
+  --c-acc-subtle: hsl(40, 10%, 45%);
+  --c-border: hsl(30, 8%, 18%);
+}

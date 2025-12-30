@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--lh-base);
+  background-color: var(--c-bg);
+  color: var(--c-fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: var(--lh-tight);
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--c-acc-subtle);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition:
+    text-decoration-color var(--dur-fast) var(--ease-out-expo),
+    color var(--dur-fast) var(--ease-out-expo),
+    opacity var(--dur-fast) var(--ease-out-expo);
+}
+
+a:hover {
+  text-decoration-color: var(--c-acc-1);
+  color: var(--c-acc-1);
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  transition:
+    transform var(--dur-fast) var(--ease-out-expo),
+    opacity var(--dur-fast) var(--ease-out-expo),
+    background var(--dur-fast) var(--ease-out-expo),
+    border-color var(--dur-fast) var(--ease-out-expo);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background: var(--c-acc-1);
+  color: var(--c-bg);
+}

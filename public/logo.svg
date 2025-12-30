@@ -1,0 +1,73 @@
+<svg width="1024" height="1024" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="warm-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="
+        1.2 0   0   0   0
+        0   1.1 0   0   0
+        0   0   0.8 0   0
+        0   0   0   1   0" result="glowingBlur" />
+      <feMerge>
+        <feMergeNode in="glowingBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="soft-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#2A2A2A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="512" height="512" rx="64" fill="#FFFCF5"/>
+
+  <g filter="url(#soft-shadow)">
+    <text
+      x="40"
+      y="300"
+      font-family="Newsreader, Georgia, 'Times New Roman', serif"
+      font-size="200"
+      font-weight="300"
+      fill="#2A2A2A"
+    >M</text>
+  </g>
+
+  <path
+    d="M 40 320 Q 70 325 120 318 Q 160 312 180 320"
+    stroke="#2A2A2A"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.25"
+  />
+
+  <g filter="url(#warm-glow)">
+    <circle cx="260" cy="120" r="5" fill="#F0D78C" />
+
+    <line
+      x1="260"
+      y1="135"
+      x2="260"
+      y2="340"
+      stroke="#F0D78C"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+
+    <text
+      x="280"
+      y="250"
+      font-family="Newsreader, Georgia, 'Times New Roman', serif"
+      font-size="72"
+      fill="#F0D78C"
+    ><tspan font-style="italic">*</tspan>(...)</text>
+
+    <text
+      x="400"
+      y="400"
+      font-family="Newsreader, Georgia, 'Times New Roman', serif"
+      font-size="28"
+      font-style="italic"
+      fill="#F0D78C"
+      opacity="0.6"
+    >cf.</text>
+  </g>
+</svg>
